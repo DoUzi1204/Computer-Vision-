@@ -49,9 +49,28 @@ Computer Vision Project/
 └── README.md                   # File tài liệu hướng dẫn (chính là file này)
 ```
 
-## 4. Thiết lập môi trường & Chạy thử
+## 4. Kịch bản thực nghiệm
 
-### 4.1. Thiết lập môi trường
+Dự án được tiến hành thực nghiệm qua các bước chính để so sánh và đánh giá hiệu quả của các thuật toán:
+
+### 4.1. Thực nghiệm phát hiện vùng biển số (License Plate Detection)
+- **Phương pháp 1:** Phát hiện dựa trên đường viền (**Contour-based**). Trích xuất các contour và lọc ra các vùng có tỷ lệ (aspect ratio) và diện tích khớp với đặc trưng của biển số xe.
+- **Phương pháp 2:** Phát hiện dựa trên cạnh và hình thái học (**Edge + Morphology**). Kết hợp toán tử phát hiện biên cạnh và các phép toán hình thái học (Morphological Closing) để kết nối các vùng chứa ký tự và khoanh vùng biển số.
+- **Mục tiêu:** Chạy thử nghiệm trên tập dữ liệu ảnh chụp thực tế để so sánh ưu/nhược điểm, độ chính xác và tốc độ nhận diện của hai phương pháp trên.
+
+### 4.2. Thực nghiệm phân đoạn ký tự (Character Segmentation)
+- Xử lý vùng biển số đã cắt: Chuyển ảnh xám, làm mờ giảm nhiễu và nhị phân hóa (Thresholding).
+- Tìm contour trên ảnh nhị phân để bóc tách từng ký tự.
+- Lọc nhiễu (đinh ốc, viền biển số) bằng cách dựa vào chiều cao, chiều rộng và diện tích của từng contour. Sắp xếp thứ tự ký tự từ trái qua phải (hoặc theo hai dòng đối với biển số vuông).
+
+### 4.3. Thực nghiệm nhận diện ký tự (Character Recognition)
+- Xây dựng kiến trúc Mạng nơ-ron tích chập (**CNN**) để phân loại ký tự (0-9 và A-Z).
+- Huấn luyện mô hình trên bộ dữ liệu `Character dataset for Vietnam license plate`.
+- Kết hợp mô hình đã huấn luyện vào pipeline nhận diện: Đưa từng ảnh ký tự đã cắt ở bước phân đoạn vào mô hình để dự đoán và ghép lại thành chuỗi biển số hoàn chỉnh.
+
+## 5. Thiết lập môi trường & Chạy thử
+
+### 5.1. Thiết lập môi trường
 
 Khuyến nghị sử dụng môi trường ảo (`.venv` hoặc `conda`) để tránh xung đột thư viện.
 
@@ -71,7 +90,7 @@ _(Nếu môi trường chưa có sẵn hoặc bị lỗi, bạn có thể tạo 
 pip install -r requirements.txt
 ```
 
-### 4.2. Chạy thử chương trình
+### 5.2. Chạy thử chương trình
 
 Có hai cách để chạy thử và kiểm tra các chức năng của dự án:
 
