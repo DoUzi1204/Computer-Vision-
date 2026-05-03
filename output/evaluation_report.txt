@@ -1,0 +1,15 @@
+=== Báo cáo đánh giá ===
+Metric                              Value
+Tổng số ảnh xử lý                   315
+Số ảnh phát hiện vùng biển số       307
+Plate Detection Accuracy (%)        97.46%
+Số ảnh nhận diện biển số            308
+Số biển số nhận diện đúng           225
+Plate Recognition Accuracy (%)      73.05%
+Tổng số ký tự                       2455
+Số ký tự nhận diện đúng             2138
+Character Recognition Accuracy (%)  87.09%
+Overall Accuracy (%)                71.43%
+
+Results saved to: output/plates.csv
+Detailed recognition results saved to: output/recognition_results.csv

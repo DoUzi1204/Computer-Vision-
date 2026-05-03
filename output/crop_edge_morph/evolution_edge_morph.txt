@@ -1,0 +1,29 @@
+Edge Morphology Detection Report
+Images evaluated: 315
+Detected plates: 196
+Plate Detection Accuracy (%): 62.22%
+Valid detection area range: [2000, 26000]
+Valid pre-ratio range: [1.0, 12.0] | final-ratio range: [1.2, 10.0]
+CSV flagged samples (flag='x' and plate not empty): 450
+Missing CSV flagged images in directory: 144
+Missing samples (first 20):
+- AQUA2_0009_checkin_2020-10-29-15-4239Xitox8VR.jpg
+- AQUA2_04926_checkin_2020-10-30-11-162zkpEK7l3M.jpg
+- AQUA2_05685_checkin_2020-10-26-15-31iYBCmaQio4.jpg
+- AQUA2_06932_checkin_2020-11-2-16-3EuXNUXG7rj.jpg
+- AQUA2_07881_checkin_2020-10-28-8-8jw5pZGoF3R.jpg
+- AQUA2_08931_checkin_2020-10-26-8-32Eq872WszPJ.jpg
+- AQUA2_13467_checkin_2020-10-29-17-11mb37wFxqsz.jpg
+- AQUA2_15961_checkin_2020-11-1-9-40kNGwmy7tkz.jpg
+- AQUA2_18036_checkin_2020-10-31-12-13Fnca5nBH2o.jpg
+- AQUA2_26144_checkin_2020-10-28-8-161KfWJBeCDS.jpg
+- AQUA2_26144_checkin_2020-11-2-9-46Vkm78dMNL5.jpg
+- AQUA2_32643_checkin_2020-10-27-10-506oldDb2dPw.jpg
+- AQUA2_32802_checkin_2020-10-27-13-49Cg1BbnuBBk.jpg
+- AQUA2_33254_checkin_2020-11-2-14-18xxjV6laalP.jpg
+- AQUA2_37986_checkin_2020-10-29-16-50XtY9BGKZIN.jpg
+- AQUA2_44035_checkin_2020-10-29-10-20rjWQpe2qPh.jpg
+- AQUA2_46885_checkin_2020-10-26-9-40UkOmDeEUL2.jpg
+- AQUA2_4703_checkin_2020-11-2-10-60zshWBfANS.jpg
+- AQUA2_52911_checkin_2020-10-25-8-52w2paLJIm01.jpg
+- AQUA2_52911_checkin_2020-11-2-15-373ysYKQN3or.jpg
