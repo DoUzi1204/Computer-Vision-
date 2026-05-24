@@ -1,3 +1,5 @@
 easyocr
 opencv-python
 openpyxl
+ultralytics
+streamlit

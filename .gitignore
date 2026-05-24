@@ -1,0 +1,23 @@
+# Repository ngoài
+PaddleOCR/
+
+# Mô hình và Trọng số
+models/PP-OCRv4/
+models/best_accuracy/
+models/inference/
+yolo11n.pt
+
+# Data & Datasets
+data/License Plate OCR/
+data/Vietnamese Car Plate/
+data/test data/
+kaggle_dataset.zip
+
+# Databases
+parking.db
+output/parking.db
+
+# Python Cache (Thêm vào để dọn dẹp các file rác .pyc của python)
+__pycache__/
+*.py[cod]
+*$py.class
