@@ -4,11 +4,11 @@ Dự án nhận diện biển số xe ứng dụng các kỹ thuật Xử lý �
 
 ## 1. Phân chia công việc
 
-| Họ và tên            | MSV      | Công việc                                                                                                                                      |
-| :------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phạm Quý Đô (Leader) | 22001562 | - Lọc dữ liệu<br>- Phát hiện biển số bằng Yolov1<br>- Phân đoạn ký tự bằng Vertical Projection và Connected Components<br>- Xây dựng GUI hệ thống |
-| Nguyễn Đình Duy      | 22001554 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Edge + Morphology<br>- Fine-tune PaddleOCR                                                       |
-| Lê Tuấn Hiệp         | 22001577 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Contour based<br>- Tiền xử lí chuẩn bị OCR                                                       |
+| Họ và tên            | MSV      | Công việc                                                                                                                                          |
+| :------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Phạm Quý Đô (Leader) | 22001562 | - Lọc dữ liệu<br>- Phát hiện biển số bằng YOLOv11<br>- Phân đoạn ký tự bằng Vertical Projection vs Connected Components<br>- Xây dựng GUI hệ thống |
+| Nguyễn Đình Duy      | 22001554 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Edge + Morphology<br>- Fine-tune PaddleOCR                                                           |
+| Lê Tuấn Hiệp         | 22001577 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Contour based<br>- Tiền xử lí chuẩn bị OCR                                                           |
 
 ## 2. Bộ dữ liệu sử dụng
 
@@ -118,13 +118,16 @@ Dự án hỗ trợ nhiều phương pháp chạy thử, từ ứng dụng GUI h
 
 **Cách 1: Chạy Giao diện người dùng (GUI) - Khuyến nghị**
 Đây là hệ thống cuối cùng đã tích hợp YOLOv11, hệ thống nhận diện ký tự và các phương pháp xử lý tối ưu nhất.
+
 ```bash
 python src/app.py
 ```
-*(Giao diện ứng dụng sẽ hiển thị, cho phép bạn tải ảnh chụp xe lên, tự động phát hiện, cắt biển số, nhận diện chữ số và lưu kết quả).*
+
+_(Giao diện ứng dụng sẽ hiển thị, cho phép bạn tải ảnh chụp xe lên, tự động phát hiện, cắt biển số, nhận diện chữ số và lưu kết quả)._
 
 **Cách 2: Chạy các script đánh giá độc lập (Terminal)**
 Nếu bạn muốn đánh giá hoặc đo lường độ chính xác của từng module riêng lẻ:
+
 - Chạy script đánh giá độ chính xác phát hiện vùng biển số (YOLOv11):
   ```bash
   python src/evaluate_detection.py
@@ -136,6 +139,7 @@ Nếu bạn muốn đánh giá hoặc đo lường độ chính xác của từn
 
 **Cách 3: Theo dõi quá trình xử lý qua Jupyter Notebook (Dành cho nghiên cứu)**
 Mở file `thucnghiem.ipynb` để chạy và trực quan hóa từng bước thuật toán (tiền xử lý, lọc nhiễu, cắt ký tự bằng Vertical Projection, v.v.):
+
 ```bash
 jupyter notebook notebooks/thucnghiem.ipynb
 ```
