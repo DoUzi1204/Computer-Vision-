@@ -6,7 +6,7 @@ Dự án nhận diện biển số xe ứng dụng các kỹ thuật Xử lý �
 
 | Họ và tên            | MSV      | Công việc                                                                                                                                      |
 | :------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phạm Quý Đô (Leader) | 22001562 | - Lọc dữ liệu<br>- Phát hiện biển số bằng Yolov1 , phân đoạn ký tự bằng Vertical Projection và Connected Components<br>- Xây dựng GUI hệ thống |
+| Phạm Quý Đô (Leader) | 22001562 | - Lọc dữ liệu<br>- Phát hiện biển số bằng Yolov1<br>- Phân đoạn ký tự bằng Vertical Projection và Connected Components<br>- Xây dựng GUI hệ thống |
 | Nguyễn Đình Duy      | 22001554 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Edge + Morphology<br>- Fine-tune PaddleOCR                                                       |
 | Lê Tuấn Hiệp         | 22001577 | - Tiền xử lí<br>- Phát hiện vùng biển số bằng Contour based<br>- Tiền xử lí chuẩn bị OCR                                                       |
 
